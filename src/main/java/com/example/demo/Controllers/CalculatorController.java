@@ -11,6 +11,12 @@ import com.example.demo.Models.Calculator;
 
 @Controller
 public class CalculatorController {
+	@GetMapping("/")
+	public String hello12(Model model) {
+		model.addAttribute("operator", "+");
+		model.addAttribute("view", "views/calculatorForm");
+		return "base-layout";
+	}
 	
 	@GetMapping("/")
 	public String checkit(Model model) {
